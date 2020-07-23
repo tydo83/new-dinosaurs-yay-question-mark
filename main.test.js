@@ -134,20 +134,36 @@ describe('truncateSpecies', () => {
 
 describe('makeExtinct', () => {
   it(`returns a new dinosaur with its extinct set to true`, () => {
-    const dino = {
+    const dino1 = {
       species: 'Brachiosaurus',
       period: 'Jurassic',
       carnivore: false,
       extinct: false
     };
 
-    const extinctDino = {
-      species: 'Brachiosaurus...',
+    const extinctDino1 = {
+      species: 'Brachiosaurus',
       period: 'Jurassic',
       carnivore: false,
       extinct: true
     };
-    expect(makeExtinct(dino)).toEqual(extinctDino);
+
+    const dino2 = {
+      species: 'T-Rex',
+      period: 'Cretaceous',
+      carnivore: true,
+      extinct: false
+    };
+
+    const extinctDino2 = {
+      species: 'T-Rex',
+      period: 'Cretaceous',
+      carnivore: true,
+      extinct: true
+    };
+
+    expect(makeExtinct(dino1)).toEqual(extinctDino1);
+    expect(makeExtinct(dino2)).toEqual(extinctDino2);
   })
 
   it(`does not mutate the original object`, () => {
