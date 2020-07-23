@@ -1,8 +1,8 @@
 const {
   makeDino,
+  makeExtinct,
   makeSingular,
   truncateSpecies,
-  makeExtinct
 } = require('./main.js')
 
 
