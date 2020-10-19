@@ -24,7 +24,7 @@
 `truncateSpecies`
 
 * It may help to make a new dinosaur first, and then edit that dinosaur's properties, rather than take shortcuts.
-* `.species` is just a string, with all the properties you'd expect. Including the `slice` method, for grabbing everything up to a certain index.
+* `.species` is just a string, with all the properties you'd expect. Including the `.slice` method, for grabbing everything up to a certain index.
 
 `makeSingular`
 
