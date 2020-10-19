@@ -28,4 +28,4 @@
 
 `makeSingular`
 
-* `species` is (still) just a string, and we can check if it ends with (`endsWith`?) another value. String's `.slice` method could come in handy here again, and remember that it can take a negative value. Look it up! I'm not lying!
+* `species` is (still) just a string, and we can check if it ends with (`endsWith`?) another value. String's `.slice` method could come in handy here again, and remember that it can take a negative value. Look it up! I'm not lying! It allows you to grab a portion of the string that starts or ends with an index counting from the END of the string. Pretty cool, right?
