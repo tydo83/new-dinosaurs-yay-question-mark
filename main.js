@@ -1,19 +1,30 @@
-const makeDino = function() {
+// Your code below.
+
+
+
+
+
+// Our code below; DO NOT TOUCH!
+if (typeof makeDino === 'undefined') {
+  makeDino = undefined;
 }
 
-const makeSingular = function() {
+if (typeof makeExtinct === 'undefined') {
+  makeExtinct = undefined;
 }
 
-const truncateSpecies = function() {
+if (typeof makeSingular === 'undefined') {
+  makeSingular = undefined;
 }
 
-const makeExtinct = function() {
-
+if (typeof truncateSpecies === 'undefined') {
+  truncateSpecies = undefined;
 }
+
 
 module.exports = {
   makeDino,
+  makeExtinct,
   makeSingular,
   truncateSpecies,
-  makeExtinct
 }
