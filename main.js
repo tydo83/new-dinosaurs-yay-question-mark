@@ -13,18 +13,18 @@ if (typeof makeExtinct === 'undefined') {
   makeExtinct = undefined;
 }
 
-if (typeof makeSingular === 'undefined') {
-  makeSingular = undefined;
-}
-
 if (typeof truncateSpecies === 'undefined') {
   truncateSpecies = undefined;
+}
+
+if (typeof makeSingular === 'undefined') {
+  makeSingular = undefined;
 }
 
 
 module.exports = {
   makeDino,
   makeExtinct,
-  makeSingular,
   truncateSpecies,
+  makeSingular,
 }

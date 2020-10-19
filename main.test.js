@@ -1,8 +1,8 @@
 const {
   makeDino,
   makeExtinct,
-  makeSingular,
   truncateSpecies,
+  makeSingular,
 } = require('./main.js')
 
 
@@ -129,56 +129,6 @@ describe('makeExtinct', () => {
   })
 })
 
-describe('makeSingular', () => {
-  it(`given a dinosaur object, returns a new dinosaur object with the "us" suffix removed from its species`, () => {
-    const dino = {
-      species: 'Brachiosaurus',
-      period: 'Jurassic',
-      carnivore: false,
-      extinct: true
-    };
-
-    const expectedDino = {
-      species: 'Brachiosaur',
-      period: 'Jurassic',
-      carnivore: false,
-      extinct: true
-    };
-
-    expect(makeSingular(dino)).toEqual(expectedDino)
-  })
-
-  it(`returns the dinosaur species intact if it does not end with 'us'`, () => {
-    const dino = {
-      species: 'Eoraptor',
-      period: 'Triassic',
-      carnivore: true,
-      extinct: false
-    }
-
-    expect(makeSingular(dino)).toEqual(dino)
-  })
-
-  it(`does not mutate the original dinosaur object`, () => {
-    const dinoTemplate = {
-      species: 'Brachiosaurus',
-      period: 'Jurassic',
-      carnivore: false,
-      extinct: true
-    };
-
-    const dino = {
-      species: 'Brachiosaurus',
-      period: 'Jurassic',
-      carnivore: false,
-      extinct: true
-    };
-
-    makeSingular(dino);
-    expect(dino).toEqual(dinoTemplate);
-  })
-})
-
 describe('truncateSpecies', () => {
   it(`returns a new dinosaur with its species truncated to 7 characters`, () => {
     const dino = {
@@ -226,6 +176,56 @@ describe('truncateSpecies', () => {
 
     truncateSpecies(dino)
     
+    expect(dino).toEqual(dinoTemplate);
+  })
+})
+
+describe('makeSingular', () => {
+  it(`given a dinosaur object, returns a new dinosaur object with the "us" suffix removed from its species`, () => {
+    const dino = {
+      species: 'Brachiosaurus',
+      period: 'Jurassic',
+      carnivore: false,
+      extinct: true
+    };
+
+    const expectedDino = {
+      species: 'Brachiosaur',
+      period: 'Jurassic',
+      carnivore: false,
+      extinct: true
+    };
+
+    expect(makeSingular(dino)).toEqual(expectedDino)
+  })
+
+  it(`returns the dinosaur species intact if it does not end with 'us'`, () => {
+    const dino = {
+      species: 'Eoraptor',
+      period: 'Triassic',
+      carnivore: true,
+      extinct: false
+    }
+
+    expect(makeSingular(dino)).toEqual(dino)
+  })
+
+  it(`does not mutate the original dinosaur object`, () => {
+    const dinoTemplate = {
+      species: 'Brachiosaurus',
+      period: 'Jurassic',
+      carnivore: false,
+      extinct: true
+    };
+
+    const dino = {
+      species: 'Brachiosaurus',
+      period: 'Jurassic',
+      carnivore: false,
+      extinct: true
+    };
+
+    makeSingular(dino);
     expect(dino).toEqual(dinoTemplate);
   })
 })
